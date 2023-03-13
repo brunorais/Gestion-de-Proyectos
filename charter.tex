@@ -28,8 +28,7 @@ usando redes neuronales profundas}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
 \cliente{Dr. Martín G. González}
-\empresaCliente{Grupo de Láser, Óptica de Materiales y Aplicaciones Electromagnéticas de la Facultad de
-Ingeniería de la Universidad de Buenos Aires}
+\empresaCliente{Grupo de Láser, Óptica de Materiales y Aplicaciones Electromagnéticas de la FIUBA}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
 \juradoUno{Nombre y Apellido (1)}
@@ -41,7 +40,7 @@ Ingeniería de la Universidad de Buenos Aires}
  
 \fechaINICIO{28 de febrero de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlan{18 de abril de 2023} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{28 de febrero de 2024}	%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{11 de diciembre de 2023}	%Fecha de defensa pública del trabajo final
 
 
 \usepackage[backend=biber]{biblatex}
@@ -100,7 +99,7 @@ Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistir�
 esencialmente en implementar un método de ajuste basado en \textit{deep learning}
 para obtener los parámetros necesarios para describir un material, dado un
 determinado modelo fenomenológico, y tendrá un presupuesto preliminar estimado de 
-\textcolor{red}{600} h de trabajo, con fecha de inicio \fechaInicioName\hspace{1px} 
+600 h de trabajo, con fecha de inicio \fechaInicioName\hspace{1px} 
 y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
@@ -124,64 +123,50 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
+%Conocer las propiedades eléctricas y mecánicas de materiales es importante para 
+%la investigación, asi como para diversas aplicaciones. El desarrollo de nuevos materiales,
+%el control de calidad y el mantenimiento preventivo son algunos ejemplos de la importancia
+%de saber las propiedades mencionadas. 
+
 El análisis de espectros de relajación es esencial para el conocimiento de las propiedades
-tanto eléctricas como mecánicas de materiales. Para describir los procesos de relajación 
+eléctricas y mecánicas de materiales. Para describir los procesos de relajación 
 se utilizan modelos fenomenológicos los cuales permiten caracterizar la respuesta mecánica 
 y eléctrica del material a partir de un pequeño conjunto de parámetros.
 Estos parámetros son relevantes para la investigación básica de materiales, como para el
-diseño de dispositivos y otras aplicaciones. Por eso, es importante poder establecer la
-cantidad de procesos de relación presentes en el espectro y, dentro de los modelos fenomenológicos disponibles, definir cuál es el más
-adecuado a utilizar para la descripción del espectro.
+diseño de dispositivos y otras aplicaciones. Por lo tanto, es importante poder establecer la cantidad 
+de procesos de relación presentes en el espectro y, dentro de los modelos fenomenológicos disponibles,
+definir cuál es el más adecuado a utilizar para la descripción del espectro.
 
-La aparición de la temática de \textit{deep learning} ha despertado el interés en la 
-comunidad científica para la aplicación en multiples campos de la ciencia y tecnología. 
-En particular, los esquemas guiados por datos (data-driven), son alternativas populares y
+Sin embargo, la obtención de algunas características en los materiales es un desafío para 
+aplicaciones de alta temperatura y alta energía. La aparición de la temática de \textit{deep learning}
+ha despertado el interés en la comunidad científica para la aplicación en multiples campos de la ciencia y tecnología. 
+En particular, los esquemas guiados por datos (\textit{data-driven}), son alternativas populares y
 poderosas para construir modelos para la predicción de propiedades y el diseño de
-materiales \cite{FrecIntro}.
-
-Bajo este contexto, el grupo de Láser, Óptica de Materiales y Aplicaciones Electromagnéticas
-de la Facultad de Ingeniería de la Universidad de Buenos Aires esta interesado en implementar
-un método de ajuste basado en \textit{deep learning} para obtener los parámetros necesarios 
-para describir un material, dado un determinado modelo fenomenológico. 
+materiales, acelerando en gran medida el descubrimiento y la aplicación de nuevos materiales.
 
 
+Bajo este contexto, el grupo de Láser, Óptica de Materiales y Aplicaciones 
+Electromagnéticas de la Facultad de Ingeniería de la Universidad de Buenos Aires 
+está interesado en implementar un método de ajuste basado en \textit{deep learning} para 
+obtener los parámetros necesarios para describir un material, dado un determinado 
+modelo fenomenológico, comparando el rendimiento contra un método tradicional y 
+otro bayesiano de obtención de parámetros. Por esta razón, se propuso como trabajo 
+final para la carrera de especialización en inteligencia artificial a través del 
+programa de vinculación con empresas.
 
-
-
-
-\begin{consigna}{red} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección. En cada entrega parcial deben eliminar los comandos begin y end del bloque consigna de las secciones que hayan completado.
-
-El objetivo es que el lector en una o dos páginas entienda de qué trata el proyecto y cuáles son sus desafíos, cuál es la motivación para realizarlo y su importancia.
-
-Se debe introducir el contexto del proyecto, el estado del arte en la temática, describir la propuesta de valor, cúal es el problema que atiende y cuál es la solución que se propone. Se debe dar una descripción funcional de la solución que incluya un diagrama en bloques.
-
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
-
-\begin{itemize}
-	\item ¿Cuál es el contexto del proyecto, es un emprendimiento personal, un proyecto para una empresa, es parte del programa de vinculación con empresas del posgrado?
-	\item ¿Existen o aplican condiciones especiales al proyecto, financiamiento de algún programa público o privado, acuerdos de confidencialidad, acuerdos sobre la propiedad intelectual de los entregables u otros?
-	\item ¿Cómo se compara la solución propuesta con el estado del arte en el campo de aplicación? ¿En qué aspectos destaca?
-	\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-	\item ¿En qué estado del ciclo de vida está la solución que se propone?
-	\item ¿Cuáles son las características del cliente (el adoptante de los entregables del proyecto) qué valora, qué necesita?
-	\item ¿Por dónde pasa la innovación?
-\end{itemize}
-
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema} y descripción funcional de la solución propuesta.
-
-Las figuras se deben mencionar en el texto ANTES de que aparezcan con una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''.  La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
-
+En la figura 1 se muera el diagrama en bloques del sistema. La entrada consistirá 
+en modelos fenomenológicos con sus respectivas etiquetas. Luego se entrenará un 
+algoritmo de deep learning y con ello se predecirán las características de los
+materiales para compararlas con métodos tradicionales de obtención de estas 
+características.
 \begin{figure}[htpb]
-\centering 
-\includegraphics[width=.5\textwidth]{./Figuras/diagBloques.png}
-\caption{Diagrama en bloques del sistema}
-\label{fig:diagBloques}
+	\centering 
+	\includegraphics[width=1\textwidth]{./Figuras/Workflow.png}
+	\caption{Diagrama en bloques del sistema}
+	\label{fig:diagBloques}
 \end{figure}
 
 \vspace{25px}
-
-El tamaño de la tipografía en TODAS las figuras debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama, preferentemente en la gama de colores pastel.
-\end{consigna}
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
@@ -197,23 +182,18 @@ El tamaño de la tipografía en TODAS las figuras debe ser adecuado para que NO 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
 Cliente       & \clientename      &\empclientename	&     -   	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
+Colaboradores & Dra. Ligia Ciocci Brazzano      & Grupo de Láser, Óptica de Materiales y Aplicaciones Electromagnéticas de la FIUBA &      -  	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Usuario final & Comunidad científica                  & Grupo de Láser, Óptica de Materiales y Aplicaciones Electromagnéticas de la Facultad de
-Ingeniería de la Universidad de Buenos Aires              	&    -    	\\ \hline
+Usuario final & Comunidad científica                  & Grupo de Láser, Óptica de Materiales y Aplicaciones Electromagnéticas de la FIUBA &    -    	\\ \hline
 \end{tabularx}
 \end{table}
 
 Características de los interesados:
 
 \begin{itemize}
-	\item Cliente: 
-	\item Colaborador:
-	\item Orientador:
-	\item Equipo:
-	\item Usuario final: 
+	\item Cliente: Aportara conocimiento y análisis de los resultados.
+	\item Colaborador: Brindará soporte en temas relacionados con la física del proyecto y análisis de los resultados.
+	\item Orientador: 
 \end{itemize}
 
 
