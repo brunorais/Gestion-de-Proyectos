@@ -5,7 +5,6 @@ codirector, % Uncomment to add a codirector to the title page
 
 
 
-
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
 \titulo{Análisis de espectros de relajación
 usando redes neuronales profundas}
@@ -40,11 +39,13 @@ Ingeniería de la Universidad de Buenos Aires}
 \juradoTres{Nombre y Apellido (3)}
 \pertenenciaJurTres{pertenencia (3)}
  
-\fechaINICIO{30 de abril de 2021}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{18 de junio de 2021} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de mayo de 2022}	%Fecha de defensa pública del trabajo final
+\fechaINICIO{28 de febrero de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{18 de abril de 2023} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{28 de febrero de 2024}	%Fecha de defensa pública del trabajo final
 
 
+\usepackage[backend=biber]{biblatex}
+\bibliography{referencias}
 \begin{document}
 
 \maketitle
@@ -71,7 +72,7 @@ Ingeniería de la Universidad de Buenos Aires}
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-%1      & Se completa hasta el punto 4 inclusive                 & dd/mm/aaaa \\ \hline
+1      & Se completa hasta el punto 5 inclusive                 & 14/03/2023 \\ \hline
 %2      & Se completa hasta el punto 7 inclusive
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
@@ -94,8 +95,13 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en implementar un metodo de ajuste basado en deep learning para obtener los parámetros necesarios para describir un material, dado un
-determinado modelo fenomenológico, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su 
+Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá 
+esencialmente en implementar un método de ajuste basado en \textit{deep learning}
+para obtener los parámetros necesarios para describir un material, dado un
+determinado modelo fenomenológico, y tendrá un presupuesto preliminar estimado de 
+\textcolor{red}{600} h de trabajo, con fecha de inicio \fechaInicioName\hspace{1px} 
+y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -117,6 +123,30 @@ Se adjunta a esta acta la planificación inicial.
 
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
+
+El análisis de espectros de relajación es esencial para el conocimiento de las propiedades
+tanto eléctricas como mecánicas de materiales. Para describir los procesos de relajación 
+se utilizan modelos fenomenológicos los cuales permiten caracterizar la respuesta mecánica 
+y eléctrica del material a partir de un pequeño conjunto de parámetros.
+Estos parámetros son relevantes para la investigación básica de materiales, como para el
+diseño de dispositivos y otras aplicaciones. Por eso, es importante poder establecer la
+cantidad de procesos de relación presentes en el espectro y, dentro de los modelos fenomenológicos disponibles, definir cuál es el más
+adecuado a utilizar para la descripción del espectro.
+
+La aparición de la temática de \textit{deep learning} ha despertado el interés en la 
+comunidad científica para la aplicación en multiples campos de la ciencia y tecnología. 
+En particular, los esquemas guiados por datos (data-driven), son alternativas populares y
+poderosas para construir modelos para la predicción de propiedades y el diseño de
+materiales \cite{FrecIntro}.
+
+Bajo este contexto, el grupo de Láser, Óptica de Materiales y Aplicaciones Electromagnéticas
+de la Facultad de Ingeniería de la Universidad de Buenos Aires esta interesado en implementar
+un método de ajuste basado en \textit{deep learning} para obtener los parámetros necesarios 
+para describir un material, dado un determinado modelo fenomenológico. 
+
+
+
+
 
 
 \begin{consigna}{red} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección. En cada entrega parcial deben eliminar los comandos begin y end del bloque consigna de las secciones que hayan completado.
@@ -156,14 +186,7 @@ El tamaño de la tipografía en TODAS las figuras debe ser adecuado para que NO 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-\begin{consigna}{red} % este comando se debe borrar para la entrega, junto con la contraparte \end{consigna}{red} 
  
-\textbf{Nota importante:} borrar esto y todas las consignas en color rojo antes de entregar este documento). Esto se hace eliminando el par de comandos que forman el bloque consigna, \verb!\begin{consigna}{red}! y \verb!\end{consigna}{red}! del código. 
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos. Si se considera que una persona cumple dos o más roles, entonces solo dejarla en el rol más importante. 
-
-Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente. Si una persona es el Responsable, no debe ser colocado también como miembro del equipo.
-
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -172,75 +195,73 @@ Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
+Cliente       & \clientename      &\empclientename	&     -   	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
 Colaboradores &                   &              	&        	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director Trabajo final \\ \hline
 Equipo        & miembro1 \newline 
 				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Usuario final & Comunidad científica                  & Grupo de Láser, Óptica de Materiales y Aplicaciones Electromagnéticas de la Facultad de
+Ingeniería de la Universidad de Buenos Aires              	&    -    	\\ \hline
 \end{tabularx}
 \end{table}
 
-El Director suele ser uno de los Orientadores.
+Características de los interesados:
 
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Es deseable listar a continuación las principales características de cada interesado.
- 
-Por ejemplo:
 \begin{itemize}
-	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-	\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-	\item Orientador: María Gómez va a poder ayudar mucho con la definición de los requerimientos.
+	\item Cliente: 
+	\item Colaborador:
+	\item Orientador:
+	\item Equipo:
+	\item Usuario final: 
 \end{itemize}
-
-\end{consigna} % este comando se debe borrar para la entrega, junto con la contraparte \begin{consigna}{red}
 
 
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
-
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
-\end{consigna}
+El propósito de este proyecto es colaborar con el grupo de investigación de la Facultad 
+de Ingeniería de la Universidad de Buenos Aires especializado en Láser, Óptica de Materiales 
+y Aplicaciones Electromagnéticas aportando una nueva alternativa de construcción de modelos 
+para la predicción de propiedades eléctricas y mecánicas de materiales.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
+El presente proyecto comprende:
 
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
+\begin{itemize}
+	\item Diseño de un método de \textit{deep learning} que permita predecir las propiedades de materiales.
+	\item Estudio del método aplicándolo a espectros simulados y medidos con ruido y relajaciones superpuestas.
+	\item Comparación de los resultados con el método tradicional y el bayesiano.
+	\item El usuario final tendrá acceso al código libremente.
+\end{itemize}
 
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
 
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
+Por otro lado no queda comprendido:
 
-\end{consigna}
+\begin{itemize}
+	\item La ejecución y el mantenimiento del software entregado luego de la finalización del trabajo.
+\end{itemize}
+
+
+
 
 
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+
+Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-	\item Supuesto 1
-	\item Supuesto 2...
+	\item Hay acceso a la información y/o bases de datos.
+	\item Las 600 h serán suficientes para cumplir con el objetivo del proyecto.
+	\item Se aplicaran conocimiento adquiridos en la carrera de especialización en inteligencia artificial.
+	\item Se brindara la bibliografía necesaria para entender y aplicar los fenómenos físicos alcanzables a este proyecto.
 \end{itemize}
 
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-\end{consigna}
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
@@ -597,5 +618,5 @@ Establecer las pautas de trabajo para realizar una reunión final de evaluación
 
 \end{consigna}
 
-
+\printbibliography
 \end{document}
