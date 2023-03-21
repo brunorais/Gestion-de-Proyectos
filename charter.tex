@@ -130,7 +130,7 @@ Se adjunta a esta acta la planificación inicial.
 
 El análisis de espectros de relajación es esencial para el conocimiento de las propiedades
 eléctricas y mecánicas de materiales. Para describir los procesos de relajación 
-se utilizan modelos fenomenológicos los cuales permiten caracterizar la respuesta mecánica 
+se utilizan modelos fenomenológicos que permiten caracterizar la respuesta mecánica 
 y eléctrica del material a partir de un pequeño conjunto de parámetros.
 Estos parámetros son relevantes para la investigación básica de materiales, como para el
 diseño de dispositivos y otras aplicaciones. Por lo tanto, es importante poder establecer la cantidad 
@@ -151,18 +151,18 @@ está interesado en implementar un método de ajuste basado en \textit{deep lear
 obtener los parámetros necesarios para describir un material, dado un determinado 
 modelo fenomenológico, comparando el rendimiento contra un método tradicional y 
 otro bayesiano de obtención de parámetros. Por esta razón, se propuso como trabajo 
-final para la carrera de especialización en inteligencia artificial a través del 
+final para la Carrera de Especialización en Inteligencia Artificial a través del 
 programa de vinculación con empresas.
 
 En la figura 1 se muera el diagrama en bloques del sistema. La entrada consistirá 
 en modelos fenomenológicos con sus respectivas etiquetas. Luego se entrenará un 
-algoritmo de deep learning y con ello se predecirán las características de los
+algoritmo de \textit{deep learning} y con ello se predecirán las características de los
 materiales para compararlas con métodos tradicionales de obtención de estas 
 características.
 \begin{figure}[htpb]
 	\centering 
 	\includegraphics[width=1\textwidth]{./Figuras/Workflow.png}
-	\caption{Diagrama en bloques del sistema}
+	\caption{Diagrama en bloques del sistema.}
 	\label{fig:diagBloques}
 \end{figure}
 
@@ -191,8 +191,8 @@ Usuario final & Comunidad científica                  & Grupo de Láser, Óptic
 Características de los interesados:
 
 \begin{itemize}
-	\item Cliente: Aportara conocimiento y análisis de los resultados.
-	\item Colaborador: Brindará soporte en temas relacionados con la física del proyecto y análisis de los resultados.
+	\item Cliente: aportara conocimiento y análisis de los resultados.
+	\item Colaborador: brindará soporte en temas relacionados con la física del proyecto y análisis de los resultados.
 	\item Orientador: 
 \end{itemize}
 
@@ -236,115 +236,164 @@ Por otro lado no queda comprendido:
 Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-	\item Hay acceso a la información y/o bases de datos.
+	\item Se podrá acceder a la información y/o bases de datos.
 	\item Las 600 h serán suficientes para cumplir con el objetivo del proyecto.
-	\item Se aplicaran conocimiento adquiridos en la carrera de especialización en inteligencia artificial.
-	\item Se brindara la bibliografía necesaria para entender y aplicar los fenómenos físicos alcanzables a este proyecto.
+	\item Se aplicarán conocimientos adquiridos en la Carrera de Especialización en Inteligencia Artificial.
+	\item Se brindará la bibliografía necesaria para entender y aplicar los fenómenos físicos alcanzables a este proyecto.
+	\item Las complicaciones que puedan surgir no atrasarán a la entrega estipulada del proyecto.
 \end{itemize}
 
 
 \section{6. Requerimientos}
+
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible estar agruparlos por afinidad, por ejemplo:
-
 \begin{enumerate}
-	\item Requerimientos funcionales
+	\item Requerimientos funcionales.
 		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
+			\item El modelo final propuesto debe ser capaz de predecir la características
+			de un material definidas por el cliente.
+			\item El sistema debe poder soportar el volumen de datos entregados para el
+			entrenamiento.
+			\item Se deben probar al menos 3 algoritmos distintos de \textit{deep learning}.
+			\item El lenguaje de desarrollo debe ser en Python.
 		\end{enumerate}
-	\item Requerimientos de documentación
+	\item Requerimientos testing.
 		\begin{enumerate}
-			\item Requerimiento 1
-			\item Requerimiento 2 (prioridad menor)
+			\item Los resultados serán provistos al cliente y el evaluará la eficacia de los
+			de los modelos desarrollados.
+			\item  Para el testeo se debe contar con un ambiente estable y con los 
+			\textit{data sets} provistos por el cliente. 
 		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+	\item Requerimientos de documentación.
+		\begin{enumerate}
+			\item El código documentado y entregado debe ser claro, replicable y mantenible.
+			\item Los informes que describan el funcionamiento deben tener la información para
+			la implementación y configuración el código 
+		\end{enumerate}
 \end{enumerate}
 
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
 
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
 
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
 
-El formato propuesto es: "como [rol] quiero [tal cosa] para [tal otra cosa]."
 
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia
-\end{consigna}
 
-\section{8. Entregables principales del proyecto}
-\label{sec:entregables}
-
-\begin{consigna}{red}
-
-Los entregables del proyecto son (ejemplo):
+Para el cálculo de los \textit{story points} correspondientes a los
+usuarios se tendrán en cuenta los siguientes criterios:
 
 \begin{itemize}
-	\item Manual de uso
-	\item Diagrama de circuitos esquemáticos
-	\item Código fuente del firmware
-	\item Diagrama de instalación
-	\item Informe final
-	\item etc...
+	\item Dificultad: evalúa la cantidad de trabajo a realizar.
+	\item Complejidad: hace referencia al nivel de sofisticación del trabajo.
+	\item Incertidumbre: se refiere al nivel de riego que involucra realizar
+	la tarea. 
 \end{itemize}
 
-\end{consigna}
+Los pesos que se le asignara a cada criterio queda detallada en la siguiente tabla.
+
+
+\begin{table}[H]
+	%\caption{Identificación de los interesados}
+	%\label{tab:interesados}
+	\begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
+	\hline
+	\rowcolor[HTML]{C0C0C0} 
+	Peso   & Dificultad & Complejidad 	& Incertidumbre 	\\ \hline
+	Bajo   & 1      & 2	&  2   	\\ \hline
+	Medio  & 3      & 5 &  3	\\ \hline
+	Alto   & 5      & 8 &  5  	\\ \hline
+	\end{tabularx}
+\end{table}
+
+
+Las historias identificadas son las siguientes:
+
+\begin{itemize}
+	\item Historia 1: como desarrollador quiero estudiar el aspecto físico
+	de lo que requiere. Dificultad: 1; complejidad: 5; incertidumbre: 3.  \textbf{\textit{Story point}: 13}.
+	\item Historia 2: Como desarrollador quiero aprender los modelos de \textit{deep learning} 
+	aplicables al proyecto. Dificultad: 3; complejidad: 5; incertidumbre: 3.  \textbf{\textit{Story point}: 13}.
+	\item Historia 3: como desarrollador quiero aplicar los modelos aprendidos de \textit{deep learning} 
+	a la predicción de características de materiales.
+	Dificultad: 3; complejidad: 8; incertidumbre: 5. \textbf{\textit{Story point}: 21}.
+	\item Historia 4: Como cliente quiero evaluar la predicción de los modelos respecto
+	a las mediciones reales. 
+	Dificultad: 1; complejidad: 2; incertidumbre: 2. \textbf{\textit{Story point}: 5}.
+	\item Historia 5: Como usuario final quiero utilizar una herramienta de IA para
+	conocer características de materiales. 
+	Dificultad: 1; complejidad: 2; incertidumbre: 5. \textbf{\textit{Story point}: 8}.
+\end{itemize}
+
+
+\section{8. Entregables principales del proyecto}
+
+Los entregables del proyecto:
+
+\begin{enumerate}
+	\item Plan de trabajo del proyecto.
+	\item Informes de avance.
+	\item Documentación de los modelos/herramientas de inteligencia artificial utilizados.
+	\item Código fuente.
+	\item Resultados de las pruebas llevadas a cabo y comparación con el modelo real.
+	\item Manual de implementación del código.
+	\item Memoria del Trabajo Final.
+\end{enumerate}
+
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
+
 
 \begin{enumerate}
-\item Grupo de tareas 1
+\item Capacitación general. (55 h)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas h)
+	\item Búsqueda y estudio de material relacionado con las características
+	de los materiales. (15 h)
+	\item Búsqueda y estudio relacionado con modelos de \textit{deep learning}.
+	(40 hs)
 	\end{enumerate}
-\item Grupo de tareas 2
+\item Planificación. (55 h)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
+	\item Realizar el plan de proyecto. (25 h)
+	\item Definir del alcance, requerimientos y tareas (15 h)
+	\item Estimar tiempos, recursos humanos y presupuesto. (15 h)
 	\end{enumerate}
-\item Grupo de tareas 3
+\item Implementación y diseño de modelos.(215 h)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
-	\item Tarea 4 (tantas h)
-	\item Tarea 5 (tantas h)
+	\item Preparar el ambiente de diseño y prueba de códigos. (10 h)
+	\item Obtener \textit{data set}. (5 h)
+	\item Preparar datos para el entrenamiento. (40 h)
+	\item Definir modelos a utilizar. (30 h)
+	\item Entrenar modelos estudiados. (50 h)
+	\item Testear unitario del código. (30 h)
+	\item Optimizar código. (50 h)
+	\end{enumerate}
+\item Análisis de resultados. (100 h)
+	\begin{enumerate}
+	\item Analizar de resultados individual. (30 h)
+	\item Documentar de resultados. (40 h)
+	\item Discutir resultados con el cliente. (30 h)
+	\end{enumerate}
+\item Documentación del producto. (35 h)
+	\begin{enumerate}
+		\item Subir material al repositorio de forma prolija. (5 h)
+		\item Desarrollar informe de uso y configuración del modelo. (30 h)
+	\end{enumerate}
+\item Presentación del trabajo. (130 h)
+	\begin{enumerate}
+		\item Escribir el informe de avance. (30 h)
+		\item Desarrollar la memoria final del proyecto. (80 h)
+		\item Preparar presentación publica. (20 h)
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: (tantas h)
+Cantidad total de horas: (590 h)
 
-Se recomienda que no haya ninguna tarea que lleve más de 40 h. 
 
-\end{consigna}
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
