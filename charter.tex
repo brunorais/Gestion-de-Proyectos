@@ -7,7 +7,7 @@ codirector, % Uncomment to add a codirector to the title page
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
 \titulo{Análisis de espectros de relajación
-usando redes neuronales profundas}
+mediante el uso de redes neuronales profundas}
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 %\posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -20,8 +20,8 @@ usando redes neuronales profundas}
 \autor{Ing. Bruno Rais} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
-\pertenenciaDirector{pertenencia} 
+\director{Alex D. Barria C.}
+\pertenenciaDirector{FIUBA} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{John Doe} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
 \pertenenciaCoDirector{FIUBA}
@@ -73,6 +73,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 5 inclusive                 & 14 de marzo de 2023 \\ \hline
 2      & Se completa hasta el punto 9 inclusive					& 21 de marzo de 2023 \\ \hline
+3      & Se completa hasta el punto 12 inclusive				& 28 de marzo de 2023 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & dd/mm/aaaa \\ \hline
@@ -94,12 +95,12 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su 
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su 
 Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá 
 esencialmente en implementar un método de ajuste basado en \textit{deep learning}
 para obtener los parámetros necesarios para describir un material dado un
 determinado modelo fenomenológico, y tendrá un presupuesto preliminar estimado de 
-600 h de trabajo, con fecha de inicio \fechaInicioName\hspace{1px} 
+590 h de trabajo, con fecha de inicio \fechaInicioName\hspace{1px} 
 y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
@@ -192,8 +193,10 @@ Características de los interesados:
 
 \begin{itemize}
 	\item Cliente: aportara conocimiento y análisis de los resultados.
-	\item Colaborador: brindará soporte en temas relacionados con la física del proyecto y análisis de los resultados.
-	\item Orientador: 
+	\item Colaborador: brindará soporte en temas relacionados con la física del proyecto 
+	y análisis de los resultados.
+	\item Orientador: se le informará sobre los avances del proyecto. Brindará conocimiento
+	y ayuda en el aspecto técnico de IA.    
 \end{itemize}
 
 
@@ -263,12 +266,12 @@ Para el desarrollo del presente proyecto se supone que:
 			\item Los resultados serán provistos al cliente y el evaluará la eficacia de los
 			modelos desarrollados.
 			\item  Para el testeo se debe contar con un ambiente estable y con los 
-			\textit{data sets} provistos por el cliente. 
+			\textit{datasets} provistos por el cliente. 
 		\end{enumerate}
 	\item Requerimientos de documentación.
 		\begin{enumerate}
 			\item El código documentado y entregado debe ser claro, replicable y sustentable.
-			\item Un manual que contenga como se realiza
+			\item Un manual que contenga cómo se realiza
 			la implementación y la configuración del código.
 		\end{enumerate}
 \end{enumerate}
@@ -292,7 +295,8 @@ usuarios se tendrán en cuenta los siguientes criterios:
 	la tarea. 
 \end{itemize}
 
-Los pesos que se le asignara a cada criterio quedan detalladas en la siguiente tabla.
+El peso que se le asignará a cada criterio quedan detallado en la 
+siguiente tabla.
 
 
 \begin{table}[H]
@@ -323,7 +327,7 @@ Las historias identificadas son las siguientes:
 	a las mediciones reales. 
 	Dificultad: 1; complejidad: 2; incertidumbre: 2. \textbf{\textit{Story point}: 5}.
 	\item Historia 5: como usuario final quiero utilizar una herramienta de IA para
-	conocer características de materiales. 
+	conocer las características de materiales. 
 	Dificultad: 1; complejidad: 2; incertidumbre: 5. \textbf{\textit{Story point}: 8}.
 \end{itemize}
 
@@ -337,7 +341,7 @@ Los entregables del proyecto son:
 	\item Informe de avance.
 	\item Documentación de los modelos/herramientas de inteligencia artificial utilizadas.
 	\item Código fuente.
-	\item Resultados de las pruebas llevadas a cabo y comparación con el las características reales de los materiales.
+	\item Resultados de las pruebas llevadas a cabo y comparación con las características reales de los materiales.
 	\item Manual de implementación del código.
 	\item Memoria del Trabajo Final.
 \end{enumerate}
@@ -362,20 +366,22 @@ Los entregables del proyecto son:
 	\item Definir del alcance, requerimientos y tareas (15 h)
 	\item Estimar tiempos, recursos humanos y presupuesto. (15 h)
 	\end{enumerate}
-\item Implementación y diseño de modelos.(215 h)
+\item Implementación y diseño de modelos. (215 h)
 	\begin{enumerate}
 	\item Preparar el ambiente de diseño y prueba de códigos. (10 h)
-	\item Obtener \textit{data set}. (5 h)
+	\item Obtener \textit{dataset}. (5 h)
 	\item Preparar datos para el entrenamiento. (40 h)
 	\item Definir modelos a utilizar. (30 h)
-	\item Entrenar modelos estudiados. (50 h)
-	\item Testear unitario del código. (30 h)
-	\item Optimizar código. (50 h)
+	\item Entrenar modelos estudiados. (35 h)
+	\item Realizar ajustes en los modelos. (15 h)
+	\item Testear el código unitariamente. (30 h)
+	\item Revisar código integralmente. (10 h)
+	\item Optimizar código. (40 h)
 	\end{enumerate}
 \item Análisis de resultados. (100 h)
 	\begin{enumerate}
-	\item Analizar de resultados individual. (30 h)
-	\item Documentar de resultados. (40 h)
+	\item Analizar resultados individuales. (30 h)
+	\item Documentar resultados. (40 h)
 	\item Discutir resultados con el cliente. (30 h)
 	\end{enumerate}
 \item Documentación del producto. (35 h)
@@ -386,8 +392,11 @@ Los entregables del proyecto son:
 \item Presentación del trabajo. (130 h)
 	\begin{enumerate}
 		\item Escribir el informe de avance. (30 h)
-		\item Desarrollar la memoria final del proyecto. (80 h)
+		\item Escritura de memoria. (40 h)
+		\item Revisión y correcciones de la memoria. (20 h)
+		\item Elaboración del video demo. (10 h)
 		\item Preparar presentación publica. (20 h)
+		\item Revisión y correcciones de la presentación (10 h)
 	\end{enumerate}
 \end{enumerate}
 
@@ -479,16 +488,6 @@ En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de Gantt realiza
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-	\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-\end{consigna}
 
 \begin{table}[htpb]
 \centering
@@ -499,50 +498,42 @@ IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
 \rowcolor[HTML]{C0C0C0} 
 Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario [ARS]} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total [ARS]} \\ \hline
+ Horas del responsable & 
+  \multicolumn{1}{c|}{590} &
+  \multicolumn{1}{c|}{3.000} &
+  \multicolumn{1}{c|}{1.770.000} \\ \hline
+Horas de los colaboradores &
+  \multicolumn{1}{c|}{150} &
+  \multicolumn{1}{c|}{3.000} &
+  \multicolumn{1}{c|}{450.000} \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{2.220.000} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario [ARS]} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total [ARS]} \\ \hline
+\multicolumn{1}{|l|}{Capacitación del responsable} &
+   1 &
+   \multicolumn{1}{c|}{403.900} &
+   \multicolumn{1}{c|}{403.900} \\ \hline
+\multicolumn{1}{|l|}{Equipo informático} &
+   1 &
+   \multicolumn{1}{c|}{200.000} &
+   \multicolumn{1}{c|}{200.000} \\ \hline
+\multicolumn{1}{|l|}{Internet} &
+   10 &
+   \multicolumn{1}{c|}{4.500}&
+   \multicolumn{1}{c|}{45.000}\\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{648.900} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
-   \\ \hline
+\multicolumn{1}{c|}{2.868.900}\\ \hline
 \end{tabularx}%
 \end{table}
 
